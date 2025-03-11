@@ -65,21 +65,6 @@ dx = input_array2(1,1)-input_array1(1,1)
 dy = input_array2(1,2)-input_array1(1,2)
 dz = input_array2(1,3)-input_array1(1,3)
 
-IF (dx .GT. halfL) THEN
-dx = dx - box_len
-ELSEIF (dx .LT. -halfL) THEN
-dx = dx + box_len
-ENDIF
-IF (dy .GT. halfL) THEN
-dy = dy - box_len
-ELSEIF (dy .LT. -halfL) THEN
-dy = dy+ box_len
-ENDIF
-IF (dz .GT. halfL) THEN
-dz = dz - box_len
-ELSEIF (dz .LT. -halfL) THEN
-dz = dz + box_len
-ENDIF
 
 dist = SQRT(dx**2+dy**2+dz**2)
 
